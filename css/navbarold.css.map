@@ -2,7 +2,7 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "../navbarold.scss"
+        "../temp/navbarold.scss"
     ],
     "names": [],
     "file": "navbarold.css"

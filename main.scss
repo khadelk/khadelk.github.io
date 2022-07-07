@@ -246,6 +246,23 @@ section {
     h2:hover::after {
       width: 100%;
     }
+
+    .github-link {
+      max-width: 200px;   
+    }
+
+    .github-link::after {
+      content: '';
+      width: 0px;
+      height: 1px;
+      display: block;
+      background: rgb(24, 22, 22);
+      transition: 300ms;
+    }
+
+    .github-link:hover::after {
+      width: 100%;
+    }
     
     .project {
       display: flex;

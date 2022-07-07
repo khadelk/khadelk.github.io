@@ -293,6 +293,24 @@ section {
   width: 100%;
 }
 
+.section-projects .github-link {
+  max-width: 200px;
+}
+
+.section-projects .github-link::after {
+  content: '';
+  width: 0px;
+  height: 1px;
+  display: block;
+  background: #181616;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.section-projects .github-link:hover::after {
+  width: 100%;
+}
+
 .section-projects .project {
   display: -webkit-box;
   display: -ms-flexbox;

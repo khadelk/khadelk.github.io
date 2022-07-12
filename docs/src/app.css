@@ -1,0 +1,28 @@
+/* Write your global styles here, in PostCSS syntax */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	html {
+		@apply scroll-smooth
+	}
+	h1 {
+		@apply font-serif text-4xl text-denim-blue;
+	}
+	h2, p, div {
+		@apply font-sans
+	}
+	p {
+		@apply text-mdgray
+	}
+	input {
+		@apply border border-denim-blue
+	}
+}
+
+@layer utilities {
+	.clip-headshot {
+		clip-path: circle(48% at center);
+	}
+}

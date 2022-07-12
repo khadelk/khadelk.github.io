@@ -1,0 +1,423 @@
+html, body {
+  // background-image: radial-gradient(ellipse at top, #e67c7c, transparent),
+  //         radial-gradient(ellipse at bottom, #5c972b, transparent);
+  background-color: rgb(24, 22, 22);
+  height: 100%;
+  margin: 0px;
+  font-family: 'Helvetica Neue', sans-serif;
+  scroll-behavior: smooth;
+  scroll-snap-align: start;
+  overflow-x: hidden;
+  overflow-wrap: anywhere;
+}
+
+h1, h2 {
+  font-family: 'Helvetica Neue Bold', sans-serif;
+  font-weight: bold;
+}
+h1 {
+  font-size: 42px;
+}
+h2 {
+  font-size: 32px;
+}
+@font-face {
+  font-family: 'Mantra-Alt';
+  src: url(../Mantra_typeface/Alt/MantraAlt.woff);
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url(../HelveticalNeue/HelveticaNeue.ttf);
+}
+
+@font-face {
+  font-family: 'Helvetica Neue Condensed Black';
+  src: url(../HelveticalNeue/HelveticaNeue-CondensedBlack.otf);
+  font-weight: strong;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue Bold';
+  src: url(../HelveticalNeue/HelveticaNeue-Bold.otf);
+  font-weight: strong;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: rgb(24, 22, 22);
+  overflow: hidden;
+  top: 0;
+  position: sticky;
+  z-index: 1;
+  width: 99vw;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: rgb(228, 205, 209);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (min-width: 601px) {
+  .topnav {
+    padding: 1.5rem;
+    a::after {
+      content: '';
+      width: 0px;
+      height: 1px;
+      display: block;
+      background: rgb(228, 205, 209);
+      transition: 300ms;
+    }
+  }
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: sticky;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+section {
+  margin: -10px;
+}
+
+
+
+.head-container {
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 500px) {
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+  .header {
+    color: rgb(228, 205, 209);
+    padding: 2em;
+    background-color: rgb(24, 22, 22);
+    //width: 30em;
+    .name {
+      font-size: 22px;
+      
+    }
+  }
+  .about-me {
+    margin: 2em 0;
+    flex-shrink: 1;
+    color: rgb(228, 205, 209);
+    font-size: 20px;
+    
+  }
+}
+
+.learn-more-button {
+  margin: 0 2em;
+  align-self: center;
+}
+
+.projects-button {
+  text-align: center;
+  align-self: center !important;
+  justify-content: center !important;
+  justify-self: center !important;
+}
+
+
+
+// .learn-more-button, .projects-button {
+  .btn {
+    display: flex;
+    width: 200px;
+    height: 50px;
+    &:not(.projects-button) {
+      background-color:rgb(228, 205, 209);
+      a {
+        color: rgb(24, 22, 22);
+      }
+      
+    }
+    &:not(.learn-more-button) {
+      background-color:rgb(24, 22, 22);
+      a {
+        color: rgb(228, 205, 209);
+      }
+    }
+    
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 50px;
+    a {
+      text-decoration: none;
+      font-family: 'Yantramanav', sans-serif;
+      i {
+        margin-left: 5px;
+        align-self: center;
+      }
+    }
+    &:hover {
+      background-color:rgb(187, 167, 170);
+      transition: 0.25s;
+    }
+    
+  }
+  
+  
+  .section-2 {
+    // padding-top: 50px;
+    background-color: rgb(228, 205, 209);
+    //overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    div {
+      margin: 0 2rem 2rem 2rem;
+    }
+    
+    .about {
+      width: 600px;
+      flex-basis: 1;
+      height: 100%;
+      // align-self: center;
+      justify-self: center;
+      
+    }
+    .headshot {
+      height: auto;
+      clip-path: circle(48% at center);
+      z-index: 0;
+      
+    }
+  }
+  
+  .section-projects {
+    padding-top: 25px;
+    background-color: rgb(228, 205, 209);
+    color:rgb(24, 22, 22);
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    h2 {
+      max-width: 300px;            
+    }
+    h2::after {
+      content: '';
+      width: 0px;
+      height: 1px;
+      display: block;
+      background: rgb(24, 22, 22);
+      transition: 300ms;
+    }
+    
+    h2:hover::after {
+      width: 100%;
+    }
+    
+    .project {
+      display: flex;
+      margin: 24px;
+      justify-content: center;
+      @media only screen and (max-width: 800px) {
+        flex-direction: column;
+        .description {
+          width: 100%;
+        }
+      }
+    }
+    .description {
+      width: 33%;
+      padding: 2em;
+      align-self: center;
+      a {
+        text-decoration: none;
+        color:rgb(24, 22, 22)
+      }
+    }
+    .responsive {
+      width: 100%;
+      height: auto;
+    }
+    .media {
+      text-align: center;
+      width: 50%;
+      align-self: center;
+    }
+    video {
+      width: 100% !important;
+      height: auto !important;
+      
+    }
+  }
+  
+  .section-resume {
+    padding-top: 25px;
+    min-height: 100vh;
+    background-color: rgb(24, 22, 22);
+    padding: 20px;
+    color: rgb(228, 205, 209);
+    @media screen and (min-width: 650px) {
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        h1 {
+          font-size: 48px;
+          margin-bottom: 1px;
+        }
+        
+        h1, h2 {
+          font-family: 'Helvetica Neue Condensed Black', sans-serif;
+          font-weight: bold;
+        }
+      }
+    }
+    
+    .resume-main {
+      grid-column: 2 / 8;
+      .links {
+        display: flex;
+        a {
+          white-space: nowrap;
+          // float: left;
+          // display: block;
+          color: rgb(228, 205, 209);
+          text-align: center;
+          padding: 0 4px;
+          text-decoration: none;
+          font-size: 17px;
+          // text-decoration: none;
+          // color:rgb(228, 205, 209);
+          font-weight: bold;
+        }
+        a::after {
+          content: '';
+          width: 0px;
+          height: 1px;
+          display: block;
+          background: rgb(228, 205, 209);
+          transition: 300ms;
+        }
+        a:hover::after {
+          width: 100%;
+        }
+      }
+      .bio {
+        margin: 12px 0;
+      }
+      .education {
+        margin: 12px 0;
+        
+      }
+      .experience {
+        h2 {
+          margin: 1px;
+        }
+        .location {
+          font-size: 22px;
+        }
+      }
+    }
+    
+    .resume-side {
+      margin-top: 44px;
+      grid-column: 9 / 11;
+      .contact, .skills, .projects {
+        margin: 12px 0;
+      }
+      .projects {
+        
+        div:not(.subheading){
+          margin: 12px 0;
+        }
+        .project-title {
+          font-weight: bold;
+        }
+        .languages {
+          font-style: italic;
+        }
+      }
+    }
+    .download-resume {
+      background-color:rgb(228, 205, 209);
+      grid-row: 2;
+      grid-column: 1 / span 12;
+      justify-self: center;
+      align-items: center;
+      // background-color:rgb(24, 22, 22);
+      padding: 15px 30px;      
+      margin-bottom: 25px;
+      text-align: center;
+      border-radius: 50px;
+      cursor: pointer;
+      a {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        color: rgb(24, 22, 22);
+        margin:0 auto;
+        
+        
+      }
+      &:hover {
+        background-color:rgb(187, 167, 170);
+        transition: 0.25s;
+        
+      }
+    }
+  }
+  
+  .subheading {
+    font-family: 'HelveticaNeue-Bold' sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  @media only screen and (min-width: 2000px) {
+    section {
+      &.section-projects {
+        margin-top: 10px;
+      }
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  

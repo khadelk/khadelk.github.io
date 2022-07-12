@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../temp/navbarold.scss"
+    ],
+    "names": [],
+    "file": "navbarold.css"
+}

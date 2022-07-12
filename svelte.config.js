@@ -1,7 +1,5 @@
 import preprocess from "svelte-preprocess";
-// import adapter from "@sveltejs/adapter-auto";
 import adapter from "@sveltejs/adapter-static";
-// import adapter from 'svelte-adapter-github'; 
 
 const dev = process.env.NODE_ENV === 'development';
 
@@ -9,15 +7,11 @@ const dev = process.env.NODE_ENV === 'development';
 const config = {
   kit: {
     adapter: adapter({
-      pages: "docs",
-      assets: "docs"
-    }),
-    paths: {
-      // change below to your repo name
-      base: dev ? "" : "/khadelk.github.io",
+			pages: 'build',  // path to public directory
+			assets: 'build',  // path to public directory
+			fallback: null
+		})
   },
-  },
-
   preprocess: [
     preprocess({
       postcss: true,

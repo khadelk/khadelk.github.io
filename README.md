@@ -1,1 +1,0 @@
-# khadelk.github.io

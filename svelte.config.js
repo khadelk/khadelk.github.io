@@ -9,9 +9,9 @@ const dev = process.env.NODE_ENV === 'development';
 const config = {
   kit: {
     adapter: adapter({
-      pages: "root",
-      assets: "root",
-      domain: "sarahelkeurti.com"
+      pages: "build",
+      assets: "build",
+      fallback:null
     }),
   },
 

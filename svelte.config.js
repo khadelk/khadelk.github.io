@@ -10,8 +10,7 @@ const config = {
   kit: {
     adapter: adapter({
       pages: "docs",
-      assets: "docs",
-      fallback: null
+      assets: "docs"
     }),
     paths: {
       base: dev ? "" : "/khadelk.github.io",

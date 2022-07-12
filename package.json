@@ -2,7 +2,6 @@
   "name": "app",
   "version": "0.0.1",
   "scripts": {
-    "deploy": "node ./gh-pages.js",
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
     "package": "svelte-kit package",

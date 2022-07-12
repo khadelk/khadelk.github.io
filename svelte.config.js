@@ -9,10 +9,13 @@ const dev = process.env.NODE_ENV === 'development';
 const config = {
   kit: {
     adapter: adapter({
-      pages: "build",
-      assets: "build",
-      fallback:null
+      pages: "docs",
+      assets: "docs",
+      fallback: null
     }),
+    paths: {
+      base: dev ? "" : "/khadelk.github.io",
+    }
   },
 
   preprocess: [

@@ -45,7 +45,7 @@
 	</div>
 	<Projects />
 	<About />
-	<Contact />
+	<!-- <Contact /> -->
 </div>
 </div>
 </main>

@@ -4,7 +4,7 @@
 	export let project;
 </script>
 
-<div class="mb-4 bg-white border border-transparent rounded-md drop-shadow-xl md:grid md:grid-cols-3 items-center md:max-h-96 md:max-w-7xl">
+<div class="mb-4 p-4 bg-white border border-transparent rounded-md drop-shadow-xl md:grid md:grid-cols-3 items-center md:max-h-96">
 	<div class="col-span-1 rounded-md">
 		<!-- Image goes here -->
 		<img class="rounded-t-md w-full max-h-96 md:rounded-l-md md:rounded-none" src="{project.image}" alt="Image of {project.name} project">

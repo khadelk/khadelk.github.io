@@ -11,7 +11,7 @@
 <div class="md:grid md:grid-cols-12">
 	<div class="md:col-start-3 md:col-end-11">
 		<Nav />
-		<div class="flex items-center justify-between h-screen">
+		<div class="flex items-center justify-between h-screen w-full">
 		<div class="p-4 my-auto max-w-screen md:p-0 md:flex flex-row-reverse justify-between items-center gap-x-2">
 			<div class="justify-self-center col-start-3">
 				<img class="clip-headshot m-auto" width="300" height="300" src="images/headshot.png" alt="Sarah headshot">

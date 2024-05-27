@@ -3,6 +3,14 @@
 	import ProjectCard from '$lib/Components/Projects/ProjectCard.svelte';
 	const projects = [
 		{
+			name:"Run A Better Set Animation", 
+			description:"Component that animates on scroll using CSS & Javascript.",
+			link: "https://www.runabetterset.com/",
+			// github_link: "https://github.com/khadelk/bechdel-test",
+			icons:['logos:javascript', 'logos:css-3'],
+			image: "/images/rabs-screen-recording.gif"
+		},
+		{
 			name:"The Bechdel Test", 
 			description:"A web app made with SvelteKit that displays whether or not films pass the Bechdel Test. This was done as a personal project to learn more about SvelteKit and data visualization.",
 			link: "https://bechdeltest.netlify.app",

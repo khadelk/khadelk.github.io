@@ -1,14 +1,10 @@
 <script>
 	import Icon from '@iconify/svelte';
 	
-	import Nav from '$lib/Components/Nav.svelte'
 	import Projects from '$lib/Components/Projects/Projects.svelte';
 	import About from '$lib/Components/About.svelte';
-	// import Contact from '$lib/Components/Contact.svelte';
 </script>
 
-<main class="bg-milk">
-	<Nav />
 <div class="md:grid md:grid-cols-12">
 	<div class="md:col-start-3 md:col-end-11">
 		<div class="flex items-center justify-between h-screen w-full">
@@ -48,4 +44,3 @@
 	<About />
 </div>
 </div>
-</main>

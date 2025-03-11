@@ -3,10 +3,19 @@
 	import ProjectCard from '$lib/Components/Projects/ProjectCard.svelte';
 	const projects = [
 		{
+			name:"Chicago Architecture Center", 
+			description:"An enterprise, full-stack website for the Chicago Architecture Center, built with Nuxt and BuilderIO.",
+			pageLink: '/chicago-architecture-center',
+			link: "https://www.architecture.org/",
+			github_link: null,
+			icons:[],
+			image: "/images/cac.png"
+		},
+		{
 			name:"Run A Better Set Animation", 
 			description:"Component that animates on scroll using CSS & Javascript.",
 			link: "https://www.runabetterset.com/",
-			// github_link: "https://github.com/khadelk/bechdel-test",
+			github_link: null,
 			icons:['logos:javascript', 'logos:css-3'],
 			image: "/images/rabs-screen-recording.gif"
 		},
@@ -32,7 +41,7 @@
 
 <div id="projects" class="flex items-center px-4 md:p-0">
 	<div class="mt-16">
-		<h1 class="py-4">My Projects</h1>
+		<h1 class="py-4">Projects</h1>
 		{#each projects as project}
 			<ProjectCard {project}/>
 		{/each}
